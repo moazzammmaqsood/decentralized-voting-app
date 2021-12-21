@@ -47,18 +47,18 @@ function Index() {
           <SignUp />
           {/* <Images /> */}
           <Vote/>
-          <BasicElements />
-          <Navbars />
-          <Tabs />
-          <Pagination />
-          <Notifications />
-          <Typography />
-          <Javascript />
-          <Carousel />
-          <NucleoIcons />
-          <CompleteExamples />
-          <Examples />
-          <Download />
+          {/* <BasicElements /> */}
+          {/* <Navbars /> */}
+          {/* <Tabs /> */}
+          {/* <Pagination /> */}
+          {/* <Notifications /> */}
+          {/* <Typography /> */}
+          {/* <Javascript /> */}
+          {/* <Carousel /> */}
+          {/* <NucleoIcons /> */}
+          {/* <CompleteExamples /> */}
+          {/* <Examples /> */}
+          {/* <Download /> */}
         </div>
         <DarkFooter />
       </div>

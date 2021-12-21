@@ -26,31 +26,31 @@ function Vote() {
   const [emailFocus, setEmailFocus] = React.useState(false);
   const [cnicFocus, setCnicFocus] = React.useState(false);
   
-  const itemData=[];
-  const item = {};
-  const item2 = {};
-  const item3 = {};
-  
- 
+  const itemData=[]; 
 
-  itemData.push(
-    item.img =    "https://i.dawn.com/primary/2018/07/5b4df20f3eafc.png",// require("assets/img/eva.jpg").default;
-    item.author = "PTI - Pakistan Tehreek e Insaaf"
-  ); 
+  itemData.push({
+    "img" :   "https://i.dawn.com/primary/2018/07/5b4df20f3eafc.png",// require("assets/img/eva.jpg").default;
+    "author" : "PTI - Pakistan Tehreek e Insaaf"
+  }); 
   //https://i.dawn.com/primary/2018/07/5b4ee52c4d1ff.png
-  itemData.push(
-    item2.img =    "https://i.dawn.com/primary/2018/07/5b4ee52c4d1ff.png",// require("assets/img/eva.jpg").default;
-    item2.author = "PPP - Pakistan Peoples Party"
-  ); 
-  itemData.push(
-    item2.img =    "https://i.dawn.com/primary/2018/07/5b4ee52c4d1ff.png",// require("assets/img/eva.jpg").default;
-    item2.author = "PPP - Pakistan Peoples Party"
-
-  ); 
-  itemData.push(  
-  item2.img =    "https://i.dawn.com/primary/2018/07/5b4ee52c4d1ff.png",// require("assets/img/eva.jpg").default;
-  item2.author = "PPP - Pakistan Peoples Party"
-); 
+  itemData.push(  {
+    "img" :  "https://i.dawn.com/primary/2018/07/5b505ecd4fbc2.png",// require("assets/img/eva.jpg").default;
+    "author" : "MQM - Mutahida Qoumi Moment"
+    }); 
+  itemData.push(  {
+    "img" :  "https://i.dawn.com/primary/2018/07/5b4ee52c4d1ff.png",// require("assets/img/eva.jpg").default;
+    "author" : "PPP - Pakistan Peoples Party"
+    }); 
+  itemData.push(  {
+  "img" :  "https://i.dawn.com/primary/2018/07/5b4ee57146316.png",// require("assets/img/eva.jpg").default;
+  "author" : "PMLN - Pakistan Muslim League N"
+  }); 
+  //https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dawn.com%2Fnews%2F1401376&psig=AOvVaw1Uc2t0vazBctRZsp7JY5Ib&ust=1640181653195000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOjysPmG9fQCFQAAAAAdAAAAABAD
+  itemData.push({
+    "img" :  "https://i.dawn.com/primary/2018/07/5b4ee75074c57.png",// require("assets/img/eva.jpg").default;
+    "author" : "JUI - Jamat-e-Islami"
+    }); 
+  
   return (
     <>
       <div
@@ -71,7 +71,8 @@ function Vote() {
               
               {itemData.map((item) => (
             
-                <ImageListItem key={item.img}>
+                <ImageListItem key={item.img}
+                style={ {margin : "4px"}}>
                  
                   <img
                     src={`${item.img}?w=248&fit=crop&auto=format`}
