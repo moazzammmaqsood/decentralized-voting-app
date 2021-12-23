@@ -83,7 +83,7 @@ function IndexNavbar() {
             navbar
           >
             <Nav navbar>
-              <NavItem>
+              {/* <NavItem>
                 <NavLink
                   href="#pablo"
                   onClick={(e) => {
@@ -96,7 +96,7 @@ function IndexNavbar() {
                   <i className="now-ui-icons arrows-1_cloud-download-93"></i>
                   <p>Sign Up</p>
                 </NavLink>
-              </NavItem>
+              </NavItem> */}
               {/* <UncontrolledDropdown nav>
                 <DropdownToggle
                   caret

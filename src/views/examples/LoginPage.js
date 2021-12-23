@@ -1,4 +1,5 @@
 import React from "react";
+import Meta from "components/Headers/MetaTag.js";
 
 // reactstrap components
 import {
@@ -23,6 +24,42 @@ import TransparentFooter from "components/Footers/TransparentFooter.js";
 function LoginPage() {
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
+  
+  const itemData=[]; 
+
+  itemData.push({
+    "id": 1,
+    "img" :   "https://i.dawn.com/primary/2018/07/5b4df20f3eafc.png",// require("assets/img/eva.jpg");
+    "author" : "PTI - Pakistan Tehreek e Insaaf",
+    "symbol": "Bat"
+  }); 
+  //https://i.dawn.com/primary/2018/07/5b4ee52c4d1ff.png
+  itemData.push(  {
+    "id": 2,
+    "img" :  "https://i.dawn.com/primary/2018/07/5b505ecd4fbc2.png",// require("assets/img/eva.jpg");
+    "author" : "MQM - Mutahida Qoumi Moment",
+    "symbol": "Kite"
+    }); 
+  itemData.push(  {
+    "id": 3,
+    "img" :  "https://i.dawn.com/primary/2018/07/5b4ee52c4d1ff.png",// require("assets/img/eva.jpg");
+    "author" : "PPP - Pakistan Peoples Party",
+    "symbol": "Arrow"
+    }); 
+  itemData.push(  {
+    "id": 4,
+  "img" :  "https://i.dawn.com/primary/2018/07/5b4ee57146316.png",// require("assets/img/eva.jpg");
+  "author" : "PMLN - Pakistan Muslim League N",
+  "symbol": "Tiger"
+  }); 
+  //https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.dawn.com%2Fnews%2F1401376&psig=AOvVaw1Uc2t0vazBctRZsp7JY5Ib&ust=1640181653195000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOjysPmG9fQCFQAAAAAdAAAAABAD
+  itemData.push({
+    "id": 5,
+    "img" :  "https://i.dawn.com/primary/2018/07/5b4ee75074c57.png",// require("assets/img/eva.jpg");
+    "author" : "JUI - Jamat-e-Islami",
+    "symbol": "Symbol of Justice"
+    }); 
+  
   React.useEffect(() => {
     document.body.classList.add("login-page");
     document.body.classList.add("sidebar-collapse");
@@ -36,16 +73,16 @@ function LoginPage() {
   }, []);
   return (
     <>
-      <ExamplesNavbar />
+      <Meta />
       <div className="page-header clear-filter" filter-color="blue">
         <div
           className="page-header-image"
           style={{
             backgroundImage:
-              "url(" + require("assets/img/login.jpg").default + ")",
+              "url(" + require("assets/img/votingbg1.jpg") + ")",
           }}
         ></div>
-        <div className="content">
+        <div className="content" style={{"margin-top": "5%"}}>
           <Container>
             <Col className="ml-auto mr-auto" md="4">
               <Card className="card-login card-plain">
@@ -54,7 +91,7 @@ function LoginPage() {
                     <div className="logo-container">
                       <img
                         alt="..."
-                        src={require("assets/img/now-logo.png").default}
+                        src={require("assets/img/e-voting.png")}
                       ></img>
                     </div>
                   </CardHeader>
@@ -71,7 +108,7 @@ function LoginPage() {
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
-                        placeholder="First Name..."
+                        placeholder="CNIC..."
                         type="text"
                         onFocus={() => setFirstFocus(true)}
                         onBlur={() => setFirstFocus(false)}
@@ -85,15 +122,23 @@ function LoginPage() {
                     >
                       <InputGroupAddon addonType="prepend">
                         <InputGroupText>
-                          <i className="now-ui-icons text_caps-small"></i>
+                          <i className="now-ui-icons shopping_box"></i>
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
-                        placeholder="Last Name..."
+                        placeholder="Vote To..."
                         type="text"
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}
-                      ></Input>
+                        type="select"
+                      >
+                        {itemData.map((item) => (
+                          <option value={item.id}
+                          style={{
+                           color: "#333",
+                          }}>{item.author}</option>
+                        ))}
+                      </Input>
                     </InputGroup>
                   </CardBody>
                   <CardFooter className="text-center">
@@ -105,7 +150,7 @@ function LoginPage() {
                       onClick={(e) => e.preventDefault()}
                       size="lg"
                     >
-                      Get Started
+                      Vote
                     </Button>
                     <div className="pull-left">
                       <h6>
@@ -114,18 +159,7 @@ function LoginPage() {
                           href="#pablo"
                           onClick={(e) => e.preventDefault()}
                         >
-                          Create Account
-                        </a>
-                      </h6>
-                    </div>
-                    <div className="pull-right">
-                      <h6>
-                        <a
-                          className="link"
-                          href="#pablo"
-                          onClick={(e) => e.preventDefault()}
-                        >
-                          Need Help?
+                          Verify CNIC
                         </a>
                       </h6>
                     </div>

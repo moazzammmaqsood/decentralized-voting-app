@@ -31,7 +31,7 @@ function SignUp() {
         id="signup-section"
         style={{
           backgroundImage:
-            "url(" + require("assets/img/bg11.jpg").default + ")",
+            "url(" + require("assets/img/bg11.jpg") + ")",
           backgroundSize: "cover",
           backgroundPosition: "top center",
           minHeight: "700px",

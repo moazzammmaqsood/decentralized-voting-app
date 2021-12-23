@@ -8,6 +8,7 @@ import React from "react";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import IndexHeader from "components/Headers/IndexHeader.js";
 import DarkFooter from "components/Footers/DarkFooter.js";
+import Meta from "components/Headers/MetaTag.js";
 
 // sections for this page
 import Images from "./index-sections/Images.js";
@@ -41,10 +42,11 @@ function Index() {
   return (
     <>
       <IndexNavbar />
+      <Meta />
       <div className="wrapper">
         <IndexHeader />
         <div className="main">
-          <SignUp />
+          {/* <SignUp /> */}
           {/* <Images /> */}
           <Vote/>
           {/* <BasicElements /> */}
