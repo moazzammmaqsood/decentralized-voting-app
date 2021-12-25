@@ -29,7 +29,7 @@ function IndexHeader() {
           className="page-header-image"
           style={{
             backgroundImage:
-              "url(" + require("assets/img/header.jpg").default + ")",
+              "url(" + require("assets/img/votingbg2.png") + ")",
           }}
           ref={pageHeader}
         ></div>
@@ -38,10 +38,10 @@ function IndexHeader() {
             <img
               alt="..."
               className="n-logo"
-              src={require("assets/img/now-logo.png").default}
+              src={require("assets/img/e-voting.png")}
             ></img>
-            <h1 className="h1-seo">Decentralized Voting System</h1>
-            <h3>Trustable Voting System </h3>
+            <h1 className="h1-seo"><b>Decentralized Voting System</b></h1>
+            <h4>Casting your vote is essential and the most influential, and peaceful tool that exists in a democratic society. Your vote is extremely vital to this system and this is why we would keep it secure, bias free and transparent. <br />Don't forget to use your right by casting a vote.</h4>
           </div>
          
         </Container>

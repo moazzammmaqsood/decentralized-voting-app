@@ -8,11 +8,11 @@ function TransparentFooter() {
   return (
     <footer className="footer">
       <Container>
-        <nav>
+      <nav>
           <ul>
             <li>
               <a
-                href="https://www.creative-tim.com?ref=nukr-transparent-footer"
+                href="https://www.creative-tim.com?ref=nukr-dark-footer"
                 target="_blank"
               >
                 Creative Tim
@@ -20,7 +20,7 @@ function TransparentFooter() {
             </li>
             <li>
               <a
-                href="http://presentation.creative-tim.com?ref=nukr-transparent-footer"
+                href="http://presentation.creative-tim.com?ref=nukr-dark-footer"
                 target="_blank"
               >
                 About Us
@@ -28,7 +28,7 @@ function TransparentFooter() {
             </li>
             <li>
               <a
-                href="http://blog.creative-tim.com?ref=nukr-transparent-footer"
+                href="http://blog.creative-tim.com?ref=nukr-dark-footer"
                 target="_blank"
               >
                 Blog
@@ -37,22 +37,11 @@ function TransparentFooter() {
           </ul>
         </nav>
         <div className="copyright" id="copyright">
-          © {new Date().getFullYear()}, Designed by{" "}
-          <a
-            href="https://www.invisionapp.com?ref=nukr-transparent-footer"
-            target="_blank"
-          >
-            Invision
-          </a>
-          . Coded by{" "}
-          <a
-            href="https://www.creative-tim.com?ref=nukr-transparent-footer"
-            target="_blank"
-          >
-            Creative Tim
-          </a>
-          .
-        </div>
+            &copy; {new Date().getFullYear()}, Designed &amp; Developed by{" "}
+            <a href="#">k214084</a> {"  "}
+            <a href="#">k214112</a> {"  "}
+            <a href="#">k214195</a> 
+          </div>
       </Container>
     </footer>
   );
