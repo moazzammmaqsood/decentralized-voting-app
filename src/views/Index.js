@@ -26,6 +26,7 @@ import SignUp from "./index-sections/SignUp.js";
 import Examples from "./index-sections/Examples.js";
 import Download from "./index-sections/Download.js";
 import Vote from "./index-sections/Vote.js"
+import LoginPage from "./examples/LoginPage"
 
 function Index() {
   React.useEffect(() => {
@@ -49,6 +50,7 @@ function Index() {
           {/* <SignUp /> */}
           {/* <Images /> */}
           <Vote/>
+          <LoginPage/>
           {/* <BasicElements /> */}
           {/* <Navbars /> */}
           {/* <Tabs /> */}
